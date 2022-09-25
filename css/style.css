@@ -1,0 +1,162 @@
+@CHARSET "UTF-8";
+
+/* 格式化 */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	border: none;
+	background: none;
+}
+
+button {
+	border: none;
+	background: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+input,
+button {
+	outline: none;
+}
+
+body {
+	font: 0.875rem/1.5 tahoma, arial, 'Hiragino Sans GB', '\5b8b\4f53', sans-serif;
+	color: rgba(0,0,0,.6);
+	-webkit-font-smoothing: antialiased;
+	background-color: #e2e2e2;
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+}
+
+.svgBg {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	bottom: 0;
+}
+
+.svgBg svg {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+}
+
+mask {
+	background-color: rgba(0, 0, 0, .3);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 0;
+}
+
+.animated {
+	transition: all .2s;
+}
+
+footer {
+	position: fixed;
+	bottom: 15px;
+	width: 100%;
+	text-align: center;
+}
+
+.content {
+	position: relative;
+	z-index: 1;
+}
+
+h1 {
+	font-family: 'Permanent Marker', cursive;
+	text-align: center;
+	width: 100%;
+	font-size: 3rem;
+	padding-top: 12%;
+	font-weight: normal;
+}
+
+.iconBox {
+	width: 70%;
+	margin: 5% auto;
+	overflow: hidden;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.iconBox a {
+	line-height: 1.2rem;
+	margin-bottom: 25px;
+	width: 16.66%;
+	text-align: center;
+	color: rgba(0,0,0,.6);
+}
+
+.iconBox a img {
+	width: 6rem;
+}
+
+.iconBox a b {
+	font-weight: normal;
+	font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+	body {
+		height: 100vh;
+		background: url(../images/bg.jpeg) no-repeat 75%;
+		background-size: cover;
+	}
+	
+	.svgBg {
+		display: none;
+	}
+
+	h1 {
+		font-size: 2rem;
+		font-weight: normal;
+		text-shadow: 0 0 5px rgba(0,0,0,.5);
+		color: rgba(255,255,255,.9);
+	}
+
+	.iconBox {
+		width: 80%;
+		margin-top: 10%;
+	}
+
+	.iconBox a {
+		width: 33.33%;
+		text-shadow: 0 0 5px rgba(0,0,0,.5);
+		color: rgba(255,255,255,.9);
+	}
+
+	.iconBox a img {
+		width: 4rem;
+	}
+	
+	.iconBox a b {
+		font-size: 0.875rem;
+	}
+	
+	footer {
+		color: rgba(255,255,255,.9);
+	}
+}
+
+
+
+
+
+
+
+
+
+
