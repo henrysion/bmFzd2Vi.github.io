@@ -33,6 +33,5 @@ echo "===================================="
 echo "用户名: akuh"
 echo "密码: Akuh.Net"
 echo "===================================="
-echo "正在通过QEMU启动Windows 10镜像"
 qemu-system-x86_64 -hda w10x64.img -m 8G -smp cores=4 -net user,hostfwd=tcp::3388-:3389 -net nic -object rng-random,id=rng0,filename=/dev/urandom -device virtio-rng-pci,rng=rng0 -vga vmware -nographic  > /dev/null 2>&1
 sleep 43200
