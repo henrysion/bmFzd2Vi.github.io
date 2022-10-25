@@ -3,7 +3,7 @@ echo "下载 Windows 10 镜像文件"
 echo "===================================="
 curl -L -o w10x64.img https://bit.ly/akuhnetW10x64
 echo "===================================="
-echo "下载 Ngrok"
+echo "安装 Ngrok"
 echo "===================================="
 wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/null 2>&1
 unzip ngrok-stable-linux-amd64.zip &>/dev/null &
@@ -27,10 +27,10 @@ echo "===================================="
 echo "用户名: akuh"
 echo "密码: Akuh.Net"
 echo "请复制上述 RDP 地址到远程桌面客户端，并输入用户名和密码"
-echo "为了保证Colab持续运行请不要关闭此标签"
+echo "为了保证 Colab 持续运行请不要关闭此标签"
 echo "===================================="
 echo "===================================="
-echo "启动QEMU"
+echo "启动 QEMU"
 echo "===================================="
 qemu-system-x86_64 -hda w10x64.img -m 8G -smp cores=4 -net user,hostfwd=tcp::3388-:3389 -net nic -object rng-random,id=rng0,filename=/dev/urandom -device virtio-rng-pci,rng=rng0 -vga vmware -nographic  > /dev/null 2>&1
 sleep 43200
