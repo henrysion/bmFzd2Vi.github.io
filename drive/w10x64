@@ -23,13 +23,15 @@ echo "===================================="
 echo RDP 地址:
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 echo "===================================="
+echo "===================================="
+echo "启动QEMU"
+echo "===================================="
 qemu-system-x86_64 -hda w10x64.img -m 8G -smp cores=4 -net user,hostfwd=tcp::3388-:3389 -net nic -object rng-random,id=rng0,filename=/dev/urandom -device virtio-rng-pci,rng=rng0 -vga vmware -nographic  > /dev/null 2>&1
 sleep 43200
+echo "启动成功"
 echo "===================================="
 echo "用户名: akuh"
 echo "密码: Akuh.Net"
-echo "===================================="
-echo "===================================="
 echo "请复制上述 RDP 地址到远程桌面客户端，并输入用户名和密码"
 echo "===================================="
 echo "为了保证Colab持续运行请不要关闭此标签"
